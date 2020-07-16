@@ -22,6 +22,8 @@ print(os.environ['APP_SETTINGS'])
 def hello():
     return "Hello World!"
 
+# /<name>, defines an endpoint / that can accept any additional value.
+# The identifier inside < and > in the route defines a variable that is passed to the function and can be used in your code.
 @app.route('/<name>')
 def hello_name(name):
     return "Hello {}!".format(name)
